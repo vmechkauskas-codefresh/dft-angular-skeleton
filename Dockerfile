@@ -1,3 +1,4 @@
+FROM python:2
 FROM jorgenfb/nginx-nodejs AS hoster
 FROM node:8.0-alpine AS builder
 
