@@ -1,4 +1,4 @@
-FROM dockerfile/nginx AS hoster
+FROM jorgenfb/nginx-nodejs AS hoster
 FROM node:8.0-alpine AS builder
 
 MAINTAINER Vladimir Mechkauskas (elartix@gmail.com)
