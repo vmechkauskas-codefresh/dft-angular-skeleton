@@ -1,9 +1,9 @@
 FROM jorgenfb/nginx-nodejs AS hoster
 FROM node:8.0-alpine AS builder
 
-# Install Node.js and other dependencies
-RUN apt-get update && \
-    apt-get -y install python build-essential
+FROM python:onbuild
+
+CMD ["python", "-v"]
 
 MAINTAINER Vladimir Mechkauskas (elartix@gmail.com)
 
