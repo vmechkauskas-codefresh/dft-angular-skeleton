@@ -1,0 +1,16 @@
+{
+  "generator-angular-dft": {
+    "user": "Vladimir Mechkauskas",
+    "appName": "dftangularskeleton",
+    "appVersion": "0.0.1",
+    "cssFramework": null,
+    "modules": {
+      "root": "dftAngularSkeleton"
+    },
+    "instalation": "complete",
+    "preprocessors": {
+      "css": "less",
+      "js": null
+    }
+  }
+}
