@@ -4,6 +4,7 @@ stages:
 - 'stage 2'
 - 'stage 3'
 steps:
+sss:
  hello:
    stage: 'stage 1'
    image: node
