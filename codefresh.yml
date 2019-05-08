@@ -1,0 +1,37 @@
+version: '1.0'
+stages:
+- 'stage 1'
+- 'stage 2'
+- 'stage 3'
+steps:
+ hello:
+   stage: 'stage 1'
+   image: node
+   commands:
+       - echo "Hello Step 1!" 
+ BuildingDockerImage:
+   stage: 'stage 2'
+   title: Building Docker Image
+   type: build
+   image_name: jessie-upd
+   working_directory: ./
+   tag: '${{CF_BRANCH_TAG_NORMALIZED}}'
+   dockerfile:
+     content: >-
+       # ---        
+        FROM debian:jessie
+
+        # installing all needed tools and libs
+        RUN apt-get update
+        RUN apt-get install git -y --force-yes
+        RUN apt-get install -y --force-yes nodejs
+        RUN apt-get install -y --force-yes npm
+        RUN apt-get install wget -y --force-yes
+        RUN apt-get install -y --force-yes nodejs-legacy
+        # RUN npm install n -g
+        # RUN n 10.13.0
+        # RUN n 9.6.1
+
+        #install project dependencies
+        # RUN npm install -g gulp@3.9.1
+        # RUN npm install -g bower
